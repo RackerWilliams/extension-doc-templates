@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE book [
+        <!-- Some useful entities borrowed from HTML -->
+        <!ENTITY ndash  "&#x2013;">
+        <!ENTITY mdash  "&#x2014;">
+        <!ENTITY hellip "&#x2026;">
+
+        <!-- Useful for describing APIs -->
+        <!ENTITY GET    '<command xmlns="http://docbook.org/ns/docbook">GET</command>'>
+        <!ENTITY PUT    '<command xmlns="http://docbook.org/ns/docbook">PUT</command>'>
+        <!ENTITY POST   '<command xmlns="http://docbook.org/ns/docbook">POST</command>'>
+        <!ENTITY DELETE '<command xmlns="http://docbook.org/ns/docbook">DELETE</command>'>
+
+]>
+  <book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
+  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
+  xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:html="http://www.w3.org/1999/xhtml"
+  version="5.0" xml:id="example" status="DRAFT">
+  <title>Cloud Foo™ Developer Guide</title>
+  <info>
+    <author>
+      <personname>
+        <firstname/>
+        <surname/>
+      </personname>
+      <affiliation>
+        <orgname>Your Organization</orgname>
+      </affiliation>
+    </author>
+    <copyright>
+     <year>2011</year>
+      <holder>Copyright Holder</holder>
+    </copyright>
+    <releaseinfo>API v1.0</releaseinfo>
+    <productname>Cloud Foo™</productname>
+    <pubdate>2011-02-25</pubdate>
+    <legalnotice role="rs-api">
+      <annotation>
+        <remark>Copyright details are filled in by the template.</remark>
+      </annotation>
+    </legalnotice>
+    <abstract>
+      <para>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam eros ipsum, tempor ut laoreet nec, adipiscing vel eros.
+        Integer sit amet nibh iaculis sapien sagittis blandit. Quisque
+        vel lectus felis, vel congue lorem. Pellentesque vitae elit id
+        sem faucibus ornare. Ut dictum dapibus quam, in scelerisque
+        quam tempus sit amet. Quisque ullamcorper suscipit sagittis. </para>
+    </abstract>
+  </info>
+  <chapter xml:id="Overview">
+    <title>Overview</title>
+    <para>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+      Etiam eros ipsum, tempor ut laoreet nec, adipiscing vel eros.
+      Integer sit amet nibh iaculis sapien sagittis blandit. Quisque
+      vel lectus felis, vel congue lorem. Pellentesque vitae elit id
+      sem faucibus ornare. Ut dictum dapibus quam, in scelerisque quam
+      tempus sit amet. Quisque ullamcorper suscipit sagittis. Maecenas
+      euismod, lectus vitae tincidunt sollicitudin, est lacus suscipit
+      nunc, in consequat tortor turpis vel nibh. Nulla eros nulla,
+      iaculis vel laoreet at, consectetur vitae massa. Praesent in
+      imperdiet urna. Etiam commodo hendrerit tincidunt. Aliquam non
+      tortor lectus, sit amet laoreet tortor. Vivamus sit amet tempor
+      lorem. Fusce aliquam, lacus et eleifend auctor, augue justo
+      consectetur risus, a congue arcu mi a velit. Donec lectus est,
+      egestas eget laoreet a, accumsan ornare erat. Suspendisse sed
+      nulla ligula. </para>
+    <para>We welcome feedback, comments, and bug reports at
+        <email>support@rackspacecloud.com</email> . </para>
+    <section xml:id="section_eow_tmw_ad">
+      <title>Intended Audience</title>
+      <para>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam eros ipsum, tempor ut laoreet nec, adipiscing vel eros.
+        Integer sit amet nibh iaculis sapien sagittis blandit. Quisque
+        vel lectus felis, vel congue lorem. Pellentesque vitae elit id
+        sem faucibus ornare. Ut dictum dapibus quam, in scelerisque
+        quam tempus sit amet. Quisque ullamcorper suscipit sagittis: </para>
+      <itemizedlist spacing="compact">
+        <listitem>
+          <para>Lorem ipsume</para>
+        </listitem>
+        <listitem>
+          <para>Dolor sit amet</para>
+        </listitem>
+      </itemizedlist>
+      <para>Maecenas euismod, lectus vitae tincidunt sollicitudin, est
+        lacus suscipit nunc, in consequat tortor turpis vel nibh.
+        Nulla eros nulla, iaculis vel laoreet at, consectetur vitae
+        massa. Praesent in imperdiet urna. Etiam commodo hendrerit
+        tincidunt. Aliquam non tortor lectus, sit amet laoreet tortor.
+        Vivamus sit amet tempor lorem. Fusce aliquam, lacus et
+        eleifend auctor, augue justo consectetur risus, a congue arcu
+        mi a velit. Donec lectus est, egestas eget laoreet a, accumsan
+        ornare erat. Suspendisse sed nulla ligula.</para>
+      <para>Maecenas euismod, <link
+          xlink:href="http://www.rackspace.com">lectus</link> vitae
+        tincidunt sollicitudin, est lacus suscipit nunc, in consequat
+        tortor turpis vel nibh. Nulla eros nulla, iaculis vel laoreet
+        at, consectetur vitae massa. </para>
+    </section>
+    <?hard-pagebreak?>
+    <section xml:id="section_mqw_tmw_ad">
+      <title>Document Change History</title>
+      <para>Maecenas euismod, lectus vitae tincidunt sollicitudin, est
+        lacus suscipit nunc, in consequat tortor turpis vel nibh.
+        Nulla eros nulla, iaculis vel laoreet at, consectetur vitae
+        massa. Praesent in imperdiet urna.:</para>
+      <informaltable rules="all">
+        <thead>
+          <tr>
+            <td align="center" colspan="1">Revision Date</td>
+            <td align="center" colspan="4">Summary of Changes</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td colspan="1" align="center">Feb. 25, 2011</td>
+            <td colspan="4">
+              <itemizedlist spacing="compact">
+                <listitem>
+                  <para>Added information about the edge purge
+                    capability for CDN-enabled containers and
+                    objectsLorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Etiam eros ipsum, tempor ut
+                    laoreet nec, adipiscing vel eros. Integer sit amet
+                    nibh iaculis sapien sagittis blandit. .</para>
+                </listitem>
+              </itemizedlist>
+            </td>
+          </tr>
+          <tr>
+            <td colspan="1" align="center">Feb. 18, 2011</td>
+            <td colspan="4">
+              <itemizedlist spacing="compact">
+                <listitem>
+                  <para>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Etiam eros ipsum, tempor ut
+                    laoreet nec, adipiscing vel eros. Integer sit amet
+                    nibh iaculis sapien sagittis blandit.  </para>
+                </listitem>
+                <listitem>
+                  <para>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Etiam eros ipsum, tempor ut
+                    laoreet nec, adipiscing vel eros. Integer sit amet
+                    nibh iaculis sapien sagittis blandit. </para>
+                </listitem>
+                <listitem>
+                  <para>Lorem ipsum dolor sit amet, consectetur
+                    adipiscing elit. Etiam eros ipsum, tempor ut
+                    laoreet nec, adipiscing vel eros. Integer sit amet
+                    nibh iaculis sapien sagittis blandit. </para>
+                </listitem>
+              </itemizedlist>
+            </td>
+          </tr>
+        </tbody>
+      </informaltable>
+    </section>
+    <section xml:id="section_jtw_tmw_ad">
+      <title>Additional Resources</title>
+      <para>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+        Etiam eros ipsum, tempor ut laoreet nec, adipiscing vel eros.
+        Integer sit amet nibh iaculis sapien sagittis blandit.  </para>
+      <para>Suspendisse eu sapien elit. Duis vitae odio orci. Nunc nec
+        nisl vel arcu condimentum adipiscing. Proin auctor, dui quis
+        aliquet varius, nulla libero faucibus est, eu ullamcorper
+        turpis enim id ante. Vivamus sem magna, egestas at mattis
+        eget, eleifend in mauris. Duis in quam in magna sollicitudin
+        sagittis. Pellentesque habitant morbi tristique senectus et
+        netus et malesuada fames ac turpis egestas. Aenean accumsan
+        malesuada erat, ut volutpat neque hendrerit eget. Praesent et
+        elit lacus. Proin dolor neque, mattis at ultricies ultrices,
+        accumsan non orci. Proin sagittis lorem vitae justo hendrerit
+        faucibus. Aliquam iaculis rhoncus orci, venenatis tempor
+        turpis mollis a. Fusce at enim sed mauris lobortis ultrices.
+        Cras quam risus, tristique quis tincidunt ut, porttitor nec
+        lacus. Nam eget dui eu quam ultrices lacinia quis id nunc.
+        Vestibulum dapibus arcu a purus sollicitudin ultrices. </para>
+      <para>You can also follow updates and announcements via twitter
+        at <link xlink:href="http://www.twitter.com/rackcloud"
+          >http://www.twitter.com/rackcloud</link> s</para>
+    </section>
+    <section>
+      <title>Sample image</title>
+      <para>Suspendisse eu sapien elit. Duis vitae odio orci. Nunc nec
+        nisl vel arcu condimentum adipiscing. Proin auctor, dui quis
+        aliquet varius, nulla libero faucibus est, eu ullamcorper
+        turpis enim id ante. Vivamus sem magna, egestas at mattis
+        eget, eleifend in mauris. Duis in quam in magna sollicitudin
+        sagittis. Pellentesque habitant morbi tristique senectus et
+        netus et malesuada fames ac turpis egestas. Aenean accumsan
+        malesuada erat, ut volutpat neque hendrerit eget. Praesent et
+        elit lacus. Proin dolor neque, mattis at ultricies ultrices,
+        accumsan non orci. Proin sagittis lorem vitae justo hendrerit
+        faucibus. Aliquam iaculis rhoncus orci, venenatis tempor
+        turpis mollis a. Fusce at enim sed mauris lobortis ultrices.
+        Cras quam risus, tristique quis tincidunt ut, porttitor nec
+        lacus. Nam eget dui eu quam ultrices lacinia quis id nunc.
+        Vestibulum dapibus arcu a purus sollicitudin ultrices. </para>
+      <para>These images are flagged with <tag>role="svg"</tag> and
+          <tag>role="html"</tag>. This causes the svg version of this
+        image to appear only in pdf output and the png version to
+        appear only in html output. <figure>
+          <title>Example image</title>
+          <mediaobject>
+            <imageobject role="fo">
+              <imagedata fileref="figures/example.svg" contentwidth="6in"/>
+            </imageobject>
+            <imageobject role="html">
+              <imagedata fileref="figures/example.png"/>
+            </imageobject>
+          </mediaobject>
+        </figure></para>
+    </section>
+  </chapter>
+</book>
