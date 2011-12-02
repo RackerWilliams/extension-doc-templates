@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<extensions xmlns="http://docs.openstack.org/common/api/v1.0"
+            xmlns:atom="http://www.w3.org/2005/Atom">
+    <extension name="Block Storge Extension"
+               namespace="http://docs.openstack.org/servers/api/ext/volumes/v1.0"
+               alias="OS-BS" updated="2011-11-06T00:00:00Z">
+        <description>
+            The extension adds block storage capabilites
+            to the compute API.
+        </description>
+        <atom:link rel="describedby" type="application/pdf"
+                   href="http://docs.rackspacecloud.com/servers/api/ext/os-bs.pdf"/>
+        <atom:link rel="describedby" type="application/vnd.sun.wadl+xml"
+                   href="http://docs.rackspacecloud.com/servers/api/ext/os-bs/os-bs.wadl"/>
+        <atom:link rel="describedby" type="application/xml"
+                   href="http://docs.rackspacecloud.com/servers/api/ext/os-bs/api.xsd"/>
+    </extension>
+</extensions>

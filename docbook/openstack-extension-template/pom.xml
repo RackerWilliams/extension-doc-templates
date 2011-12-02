@@ -34,7 +34,7 @@
             <plugin>
                 <groupId>com.rackspace.cloud.api</groupId>
                 <artifactId>clouddocs-maven-plugin</artifactId>
-                <version>1.0.8-SNAPSHOT</version>
+                <version>1.0.8</version>
                 <executions>
                     <execution>
                         <goals>
@@ -45,6 +45,7 @@
                     </execution>
                 </executions>
                 <configuration>
+                    <includes>acme-temp.xml</includes>
                     <branding>openstack</branding>
                     <trimWadlUriCount>1</trimWadlUriCount>
                     <pdfUrl>acme-temp.pdf</pdfUrl>
