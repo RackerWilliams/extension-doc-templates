@@ -461,12 +461,7 @@
                   can insert a normalization step in the build process
                   (see pom.xml).
               -->
-              <resources xmlns="http://wadl.dev.java.net/2009/02">
-                  <resource href="acme-temp.wadl#widgets">
-                      <method href="getWidgets"/>
-                  </resource>
-                  <resource href="acme-temp.wadl#widget"/>
-              </resources>
+              <wadl:resources href="acme-temp.wadl"/>
           </section>
       </section>
   </chapter>
