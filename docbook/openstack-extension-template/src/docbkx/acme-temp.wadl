@@ -135,6 +135,7 @@
             </representation>
         </response>
         &commonFaults;
+        &getFaults;
         &extendedFaults;
     </method>
 
