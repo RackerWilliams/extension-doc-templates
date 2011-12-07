@@ -311,18 +311,25 @@
               </para>
               <!--
                   You can insert WADL inline to quickly describe an
-                  API.  Inline WADL needs to be normalized, that is,
-                  it cannot contain external references, so you should
-                  probably take this apporach when you have a small
-                  number of resources to describe.
+                  API.  Inline WADL needs to be normalized, that is:
 
-                  Note that you can insert docbook documentation tags
-                  in the WADL.
+                  1. It cannot contain external references.
+                  2. Resources must contian full paths
+                  3. Resources cannot be embeded in other resources.
+                  
+                  You do not have these restrictions when referencing
+                  an external WADL (see below). You should probably
+                  take the inline WADL apporach only when you have a
+                  small number of resources to describe.
               -->
               <wadl:resources base="https://api.openstack.com/v2/ACME-TEMP">
-                  <wadl:resource path="templates">
+                  <wadl:resource path="/ACME-TEMP/templates">
                       <wadl:method name="GET" id="getTemplates">
                           <wadl:doc xml:lang="EN" title="List Templates">
+                              <!--
+                                  Note that you can insert docbook documentation tags
+                                  in the WADL.
+                              -->
                               <para role="shortdesc">
                                   Get a list of templates.
                               </para>
@@ -357,7 +364,7 @@
                               </para>
                           </wadl:doc>
                           <wadl:response status="200 203">
-                              <wadl:representation mediaType="application/xml" element="acme:extensions">
+                              <wadl:representation mediaType="application/xml" element="acme:templates">
                                   <wadl:doc xml:lang="EN">
                                       <?hard-pagebreak?>
                                       <example>
@@ -371,6 +378,62 @@
                                       <example>
                                           <title>List Templates Response: JSON</title>
                                           <programlisting language="javascript"><xi:include href="samples/templates.json" parse="text"/></programlisting>
+                                      </example>
+                                  </wadl:doc>
+                              </wadl:representation>
+                          </wadl:response>
+                          <wadl:response status="401">
+                              <wadl:representation mediaType="application/xml" element="osapi:unauthorized"/>
+                              <wadl:representation mediaType="applicaiton/json"/>
+                          </wadl:response>
+                          <wadl:response status="403">
+                              <wadl:representation mediaType="application/xml" element="acme:notAllowed"/>
+                              <wadl:representation mediaType="applicaiton/json"/>
+                          </wadl:response>
+                      </wadl:method>
+                  </wadl:resource>
+                  <wadl:resource path="/ACME-TEMP/templates/{templateId}">
+                      <wadl:param name="templateId" style="template" type="xsd:string">
+                          <wadl:doc xml:lang="EN" title="Template ID">
+                              <para>
+                                  A unique identifier for the template.
+                              </para>
+                          </wadl:doc>
+                      </wadl:param>
+                      <wadl:method name="GET" id="getTemplate">
+                          <wadl:doc xml:lang="EN" title="Get Template">
+                              <para role="shortdesc">
+                                  Get a template.
+                              </para>
+                              <para>
+                                  This operation returns a
+                                  template. Suspendisse eu sapien
+                                  elit. Duis vitae odio orci. Nunc
+                                  nec nisl vel arcu condimentum
+                                  adipiscing. Proin auctor, dui
+                                  quis aliquet varius, nulla
+                                  libero faucibus est, eu
+                                  ullamcorper turpis enim id
+                                  ante. Vivamus sem magna, egestas
+                                  at mattis eget, eleifend in
+                                  mauris. Duis in quam in magna
+                                  sollicitudin
+                              </para>
+                          </wadl:doc>
+                          <wadl:response status="200 203">
+                              <wadl:representation mediaType="application/xml" element="acme:template">
+                                  <wadl:doc xml:lang="EN">
+                                      <example>
+                                          <title>Get Template Response: XML</title>
+                                          <programlisting language="xml"><xi:include href="samples/template.xml" parse="text"/></programlisting>
+                                      </example>
+                                  </wadl:doc>
+                              </wadl:representation>
+                              <wadl:representation mediaType="application/json">
+                                  <wadl:doc xml:lang="EN">
+                                      <example>
+                                          <title>Get Template Response: JSON</title>
+                                          <programlisting language="javascript"><xi:include href="samples/template.json" parse="text"/></programlisting>
                                       </example>
                                   </wadl:doc>
                               </wadl:representation>
