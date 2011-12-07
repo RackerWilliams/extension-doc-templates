@@ -465,6 +465,7 @@
                   <resource href="acme-temp.wadl#widgets">
                       <method href="getWidgets"/>
                   </resource>
+                  <resource href="acme-temp.wadl#widget"/>
               </resources>
           </section>
       </section>

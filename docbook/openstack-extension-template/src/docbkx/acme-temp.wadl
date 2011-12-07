@@ -33,10 +33,16 @@
     <resources base="https://api.openstack.com/v2/ACME-TEMP">
         <resource path="/ACME-TEMP/widgets" id="widgets">
             <method href="#getWidgets"/>
-            <resource path="{id}" id="widget">
-                <!-- Pending -->
-                <!--
+            <resource path="{widgetId}" id="widget">
+                <param name="templateId" style="template" type="xsd:string">
+                    <doc xml:lang="EN" title="Template ID">
+                        <db:para>
+                            A unique identifier for the widget.
+                        </db:para>
+                    </doc>
+                </param>
                 <method href="#getWidget"/>
+                <!--
                 <method href="#deleteWidget"/>
                 <method href="#createWidget"/>
                 -->
@@ -88,4 +94,48 @@
         &commonFaults;
         &extendedFaults;
     </method>
+
+    <method name="GET" id="getWidget">
+        <doc xml:lang="EN" title="Get Widget">
+            <db:para role="shortdesc">
+                Get a widget.
+            </db:para>
+            <db:para>
+                This operation returns a widget. Suspendisse eu sapien
+                elit. Duis vitae odio orci. Nunc nec nisl vel arcu
+                condimentum adipiscing. Proin auctor, dui quis aliquet
+                varius, nulla libero faucibus est, eu ullamcorper
+                turpis enim id ante. Vivamus sem magna, egestas at
+                mattis eget, eleifend in mauris. Duis in quam in magna
+                sollicitudin sagittis. Pellentesque habitant morbi
+                tristique senectus et netus et malesuada fames ac
+                turpis egestas. Aenean accumsan malesuada erat, ut
+                volutpat neque hendrerit eget. Praesent et elit
+                lacus. Proin dolor neque, mattis at ultricies
+                ultrices, accumsan non orci. Proin sagittis lorem
+                vitae justo hendrerit faucibus. Aliquam iaculis
+                rhoncus orci, venenatis tempor turpis mollis a. Fusce
+                at enim sed mauris lobortis ultrices.  Cras quam
+                risus, tristique quis tincidunt ut, porttitor nec
+                lacus. Nam eget dui eu quam ultrices lacinia quis id
+                nunc.  Vestibulum dapibus arcu a purus sollicitudin
+                ultrices.
+            </db:para>
+        </doc>
+        <response status="200 203">
+            <representation mediaType="application/xml" element="acme:widget">
+                <doc xml:lang="EN">
+                    <xsdxt:code href="samples/widget.xml"/>
+                </doc>
+            </representation>
+            <representation mediaType="application/json">
+                <doc xml:lang="EN">
+                    <xsdxt:code href="samples/widget.json"/>
+                </doc>
+            </representation>
+        </response>
+        &commonFaults;
+        &extendedFaults;
+    </method>
+
 </application>

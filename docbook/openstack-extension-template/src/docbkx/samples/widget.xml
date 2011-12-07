@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<widget xmlns="http://docs.acme.org/servers/api/ext/template/v1.0"
+        name="widget1">
+    <description>
+        Widget version 1
+    </description>
+</widget>
