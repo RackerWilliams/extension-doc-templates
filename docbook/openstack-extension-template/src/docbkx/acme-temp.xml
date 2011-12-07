@@ -239,6 +239,56 @@
       </section>
   </chapter>
   <chapter>
+      <title>Summary of Changes</title>
+      <!--
+          Provide an overall summary of the extension.  Give an
+          overview of how the extensions works and what capabilities it
+          adds.
+      -->
+      <para>
+          This extension adds...Lorem ipsum dolor sit amet,
+          consectetur adipiscing elit.  Etiam eros ipsum, tempor ut
+          laoreet nec, adipiscing vel eros.  Integer sit amet nibh
+          iaculis sapien sagittis blandit.
+      </para>
+      <section>
+          <title>New Headers</title>
+          <!--
+              Describe any new headers, if any.
+          --> 
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New Faults</title>
+          <!--
+              Discribe any new faults, if any.  Make sure you specify
+              if the fault can be expectid in all requests.
+          -->
+          <table rules="all">
+              <caption>Fault Elements and Error Codes</caption>
+              <thead>
+                  <tr>
+                      <td>Fault Element</td>
+                      <td>Associated Error Codes</td>
+                      <td>Expected in All Requests?</td>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>&ALIAS;:templateConflict</td>
+                      <td>409</td>
+                      <td/>
+                  </tr>
+                  <tr>
+                      <td>&ALIAS;:notAllowed</td>
+                      <td>403</td>
+                      <td>YES</td>
+                  </tr>
+              </tbody>
+          </table>
+      </section>
+  </chapter>
+  <chapter>
       <title>Temp</title>
         <section xml:id="section_jtw_tmw_ad">
             <title>Additional Resources</title>
