@@ -42,8 +42,8 @@
                     </doc>
                 </param>
                 <method href="#getWidget"/>
-                <!--
                 <method href="#deleteWidget"/>
+                <!--
                 <method href="#createWidget"/>
                 -->
             </resource>
@@ -136,6 +136,25 @@
         </response>
         &commonFaults;
         &extendedFaults;
+    </method>
+
+    <method name="DELETE" id="deleteWidget">
+        <doc xml:lang="EN" title="Delete Widget">
+            <db:para role="shortdesc">
+                Deletes a widget.
+            </db:para>
+            <db:para>
+                This operation deletes a widget. Suspendisse eu sapien
+                elit. Duis vitae odio orci. Nunc nec nisl vel arcu
+                condimentum adipiscing. Proin auctor, dui quis aliquet
+                varius, nulla libero faucibus est, eu ullamcorper
+                turpis enim id ante.
+            </db:para>
+        </doc>
+        <response status="204"/>
+        <!-- Common, GET -->
+        &commonFaults;
+        &getFaults;
     </method>
 
 </application>
