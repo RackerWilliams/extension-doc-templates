@@ -22,6 +22,7 @@
   xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:html="http://www.w3.org/1999/xhtml"
   version="5.0" xml:id="example" status="DRAFT">
   <title>OpenStack Compute Template Extension</title>
+  <titleabbrev>&ALIAS;</titleabbrev>
   <info>
     <author>
       <personname>
