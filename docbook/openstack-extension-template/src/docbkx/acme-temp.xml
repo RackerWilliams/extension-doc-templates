@@ -17,10 +17,16 @@
          <!ENTITY ALIAS "ACME-TEMP">
          <!ENTITY NAMESPACE "http://docs.acme.org/servers/api/ext/template/v1.0">
 ]>
-<book xmlns="http://docbook.org/ns/docbook" xmlns:xlink="http://www.w3.org/1999/xlink"
-  xmlns:xi="http://www.w3.org/2001/XInclude" xmlns:svg="http://www.w3.org/2000/svg"
-  xmlns:m="http://www.w3.org/1998/Math/MathML" xmlns:html="http://www.w3.org/1999/xhtml"
-  version="5.0" xml:id="example" status="DRAFT">
+<book xmlns="http://docbook.org/ns/docbook"
+      xmlns:xlink="http://www.w3.org/1999/xlink"
+      xmlns:xi="http://www.w3.org/2001/XInclude"
+      xmlns:svg="http://www.w3.org/2000/svg"
+      xmlns:m="http://www.w3.org/1998/Math/MathML"
+      xmlns:html="http://www.w3.org/1999/xhtml"
+      xmlns:acme="http://docs.acme.org/servers/api/ext/template/v1.0"
+      xmlns:wadl="http://wadl.dev.java.net/2009/02"
+      xmlns:osapi="http://docs.openstack.org/compute/api/v1.1"
+      version="5.0" xml:id="example" status="DRAFT">
   <title>OpenStack Compute Template Extension</title>
   <titleabbrev>&ALIAS;</titleabbrev>
   <info>
@@ -287,6 +293,100 @@
                   </tr>
               </tbody>
           </table>
+      </section>
+      <section role="api-reference">
+          <title>New Resources</title>
+          <!--
+              List any new resources here.  The api-reference role
+              above means that a reference table of all new resources
+              will be placed here.
+          -->
+          <para>
+              The following new resources are created.
+          </para>
+          <section>
+              <title>Templates</title>
+              <para>
+                  The following are a list of operations on templates.
+              </para>
+              <!--
+                  You can insert WADL inline to quickly describe an
+                  API.  Inline WADL needs to be normalized, that is,
+                  it cannot contain external references, so you should
+                  probably take this apporach when you have a small
+                  number of resources to describe.
+
+                  Note that you can insert docbook documentation tags
+                  in the WADL.
+              -->
+              <wadl:resources base="https://api.openstack.com/v2/ACME-TEMP">
+                  <wadl:resource path="templates">
+                      <wadl:method name="GET" id="getTemplates">
+                          <wadl:doc xml:lang="EN" title="List Templates">
+                              <para role="shortdesc">
+                                  Get a list of templates.
+                              </para>
+                              <para>
+                                  This operation returns a complete list
+                                  of templates.Suspendisse eu sapien
+                                  elit. Duis vitae odio orci. Nunc nec
+                                  nisl vel arcu condimentum
+                                  adipiscing. Proin auctor, dui quis
+                                  aliquet varius, nulla libero faucibus
+                                  est, eu ullamcorper turpis enim id
+                                  ante. Vivamus sem magna, egestas at
+                                  mattis eget, eleifend in mauris. Duis in
+                                  quam in magna sollicitudin
+                                  sagittis. Pellentesque habitant morbi
+                                  tristique senectus et netus et malesuada
+                                  fames ac turpis egestas. Aenean accumsan
+                                  malesuada erat, ut volutpat neque
+                                  hendrerit eget. Praesent et elit
+                                  lacus. Proin dolor neque, mattis at
+                                  ultricies ultrices, accumsan non
+                                  orci. Proin sagittis lorem vitae justo
+                                  hendrerit faucibus. Aliquam iaculis
+                                  rhoncus orci, venenatis tempor turpis
+                                  mollis a. Fusce at enim sed mauris
+                                  lobortis ultrices.  Cras quam risus,
+                                  tristique quis tincidunt ut, porttitor
+                                  nec lacus. Nam eget dui eu quam ultrices
+                                  lacinia quis id nunc.  Vestibulum
+                                  dapibus arcu a purus sollicitudin
+                                  ultrices.
+                              </para>
+                          </wadl:doc>
+                          <wadl:response status="200 203">
+                              <wadl:representation mediaType="application/xml" element="acme:extensions">
+                                  <wadl:doc xml:lang="EN">
+                                      <?hard-pagebreak?>
+                                      <example>
+                                          <title>List Templates Response: XML</title>
+                                          <programlisting language="xml"><xi:include href="samples/templates.xml" parse="text"/></programlisting>
+                                      </example>
+                                  </wadl:doc>
+                              </wadl:representation>
+                              <wadl:representation mediaType="application/json">
+                                  <wadl:doc xml:lang="EN">
+                                      <example>
+                                          <title>List Templates Response: JSON</title>
+                                          <programlisting language="javascript"><xi:include href="samples/templates.json" parse="text"/></programlisting>
+                                      </example>
+                                  </wadl:doc>
+                              </wadl:representation>
+                          </wadl:response>
+                          <wadl:response status="401">
+                              <wadl:representation mediaType="application/xml" element="osapi:unauthorized"/>
+                              <wadl:representation mediaType="applicaiton/json"/>
+                          </wadl:response>
+                          <wadl:response status="403">
+                              <wadl:representation mediaType="application/xml" element="acme:notAllowed"/>
+                              <wadl:representation mediaType="applicaiton/json"/>
+                          </wadl:response>
+                      </wadl:method>
+                  </wadl:resource>
+              </wadl:resources>
+          </section>
       </section>
   </chapter>
   <chapter>

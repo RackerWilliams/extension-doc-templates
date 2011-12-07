@@ -1,0 +1,16 @@
+{
+   "templates" : [
+       {
+           "name" : "template1",
+           "description" : "Template version 1"
+       },
+       {
+           "name" : "template2",
+           "description" : "Template version 2"
+       },
+       {
+           "name" : "template3",
+           "description" : "Template version 3"
+       }
+   ]
+}

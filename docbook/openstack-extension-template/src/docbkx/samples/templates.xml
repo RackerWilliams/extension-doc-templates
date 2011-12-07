@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<templates xmlns="http://docs.acme.org/servers/api/ext/template/v1.0">
+    <template name="template1">
+        <description>
+            Template version 1
+        </description>
+    </template>
+    <template name="template2">
+        <description>
+            Template version 2
+        </description>
+    </template>
+    <template name="template3">
+        <description>
+            Template version 3
+        </description>
+    </template>
+</templates>
