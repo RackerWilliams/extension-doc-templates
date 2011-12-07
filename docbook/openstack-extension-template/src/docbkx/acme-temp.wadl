@@ -43,9 +43,6 @@
                 </param>
                 <method href="#getWidget"/>
                 <method href="#deleteWidget"/>
-                <!--
-                <method href="#createWidget"/>
-                -->
             </resource>
         </resource>
     </resources>
