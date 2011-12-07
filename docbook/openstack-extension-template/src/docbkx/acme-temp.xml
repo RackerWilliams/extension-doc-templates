@@ -13,7 +13,6 @@
 
 
          <!-- Information about the extension -->
-         <!ENTITY VERSION  "v1.0">
          <!ENTITY PUB_DATE "2011-11-30">
          <!ENTITY ALIAS "ACME-TEMP">
          <!ENTITY NAMESPACE "http://docs.acme.org/servers/api/ext/template/v1.0">
@@ -46,7 +45,8 @@
     </legalnotice>
     <abstract>
         <!--
-            Insert a short description of your template.
+            Insert a short description of your template.  This is used
+            in the copyright statement.
         -->
         <para>This is a sample extension.</para>
     </abstract>
@@ -114,7 +114,7 @@
           <varlistentry>
               <term>Name</term>
               <listitem>
-                  <para>Block Storge Extension</para>
+                  <para>ACME Template Extension</para>
               </listitem>
           </varlistentry>
           <varlistentry>
@@ -134,10 +134,10 @@
               <listitem>
                   <para>
                       <personname>
-                          <firstname>Gabe</firstname>
-                          <surname>Westmaas</surname>
+                          <firstname>Joe</firstname>
+                          <surname>Developer</surname>
                       </personname>
-                      <email>gabe.westmaas@rackspace.com</email>
+                      <email>joe@acme.com</email>
                   </para>
               </listitem>
           </varlistentry>
@@ -148,9 +148,9 @@
               </listitem>
           </varlistentry>
           <varlistentry>
-              <term>Version</term>
+              <term>Last Update</term>
               <listitem>
-                  <para>&VERSION; (&PUB_DATE;)</para>
+                  <para>&PUB_DATE;</para>
               </listitem>
           </varlistentry>
           <varlistentry>
@@ -163,8 +163,8 @@
               <term>Doc Link (PDF)</term>
               <listitem>
                   <para>
-                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/os-bs.pdf">
-                          http://docs.rackspacecloud.com/servers/api/ext/os-bs.pdf
+                      <link xlink:href="http://docs.acme.com/servers/api/ext/acme-temp.pdf">
+                          http://docs.acme.com/servers/api/ext/acme-temp.pdf
                       </link>
                   </para>
               </listitem>
@@ -173,8 +173,8 @@
               <term>Doc Link (WADL)</term>
               <listitem>
                   <para>
-                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/os-bs/os-bs.wadl">
-                          http://docs.rackspacecloud.com/servers/api/ext/os-bs/os-bs.wadl
+                      <link xlink:href="http://docs.acme.com/servers/api/ext/acme-temp.wadl">
+                          http://docs.acme.com/servers/api/ext/acme-temp.wadl
                       </link>
                   </para>
               </listitem>
@@ -183,8 +183,14 @@
               <term>Doc Link (XSD)</term>
               <listitem>
                   <para>
-                      <link xlink:href="http://docs.rackspacecloud.com/servers/api/ext/os-bs/api.xsd">
-                          http://docs.rackspacecloud.com/servers/api/ext/os-bs/api.xsd
+                      <!--
+                          You can provide additional schema links,
+                          such as JSON schema etc.  Normally, these
+                          are included in the WADL, if so, you need
+                          not directly link them here.
+                      -->
+                      <link xlink:href="http://docs.acme.com/servers/api/ext/acme-temp.xsd">
+                          http://docs.acme.com/servers/api/ext/acme-temp.xsd
                       </link>
                   </para>
               </listitem>
@@ -192,22 +198,32 @@
           <varlistentry>
               <term>Short Description</term>
               <listitem>
+                  <!--
+                      A short description of the extension goes here.
+                      This short descrption is aimed at devs.
+                  -->
                   <para>
-                      The extension adds block storage capabilites
-                      to the compute API.
+                      The extension illustrates how to document other extensions.
                   </para>
               </listitem>
           </varlistentry>
       </variablelist>
+      <!--
+          This is how you do a page break in the PDF output.  It's
+          optional.
+      -->
       <?hard-pagebreak?>
+      <!--
+          The following examples should illustrate the extension query
+          response.
+      -->
       <example>
           <title>Extension Query Response: XML</title>
-          <programlisting language="xml"><?db-font-size 95% ?><xi:include href="samples/ext_query.xml" parse="text"/></programlisting>
+          <programlisting language="xml"><xi:include href="samples/ext_query.xml" parse="text"/></programlisting>
       </example>
-      <?hard-pagebreak?>
       <example>
           <title>Extension Query Response: JSON</title>
-          <programlisting language="javascript"><?db-font-size 95% ?><xi:include href="samples/ext_query.json" parse="text"/></programlisting>
+          <programlisting language="javascript"><xi:include href="samples/ext_query.json" parse="text"/></programlisting>
       </example>
       <section>
           <title>Document Change History</title>
@@ -215,6 +231,11 @@
               The most recent changes to this document are desrcibed
               below.
           </para>
+          <!--
+              The rev history, described in the info element above,
+              should be output in this part of the document.
+          -->
+          <?rax revhistory?>
       </section>
   </chapter>
   <chapter>
