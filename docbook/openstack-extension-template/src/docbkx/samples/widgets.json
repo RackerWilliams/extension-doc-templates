@@ -1,0 +1,16 @@
+{
+   "widgets" : [
+       {
+           "name" : "widget1",
+           "description" : "Widget version 1"
+       },
+       {
+           "name" : "widget2",
+           "description" : "Widget version 2"
+       },
+       {
+           "name" : "widget3",
+           "description" : "Widget version 3"
+       }
+   ]
+}

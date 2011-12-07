@@ -450,6 +450,23 @@
                   </wadl:resource>
               </wadl:resources>
           </section>
+          <section>
+              <title>Widgets</title>
+              <para>
+                  The following are a list of operations on templates.
+              </para>
+              <!--
+                  You can insert a WADL by referencing it from another
+                  file.  The WADL need not be normalized because you
+                  can insert a normalization step in the build process
+                  (see pom.xml).
+              -->
+              <resources xmlns="http://wadl.dev.java.net/2009/02">
+                  <resource href="acme-temp.wadl#widgets">
+                      <method href="getWidgets"/>
+                  </resource>
+              </resources>
+          </section>
       </section>
   </chapter>
   <chapter>

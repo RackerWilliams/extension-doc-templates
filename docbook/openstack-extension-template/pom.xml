@@ -7,6 +7,20 @@
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
     <name>Example Extension Docs</name>
+
+    <properties>
+        <doctools.version>1.0.8</doctools.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.rackspace.cloud.api</groupId>
+            <artifactId>clouddocs-maven-plugin</artifactId>
+            <scope>compile</scope>
+            <version>${doctools.version}</version>
+        </dependency>
+    </dependencies>
+
     <profiles>
         <profile>
             <id>Rackspace Research Repositories</id>
@@ -31,10 +45,67 @@
     </profiles>
     <build>
         <plugins>
+            <!-- Unpack the wadl normalization xslts -->
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-dependency-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <id>unpack-shared-resources</id>
+                        <goals>
+                            <goal>unpack-dependencies</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                        <configuration>
+                            <outputDirectory>${project.build.directory}/generated-resources</outputDirectory>
+                            <includeGroupIds>com.rackspace.cloud.api</includeGroupIds>
+                            <includeArtifactIds>clouddocs-maven-plugin</includeArtifactIds>
+                            <excludeTransitive>true</excludeTransitive>
+                            <includes>**/normalizeWadl/*.xsl</includes>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+            <plugin>
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>xml-maven-plugin</artifactId>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>transform</goal>
+                        </goals>
+                        <phase>generate-sources</phase>
+                    </execution>
+                </executions>
+                <configuration>
+                    <transformationSets>
+                        <transformationSet>
+                            <dir>src/docbkx/</dir>
+                            <includes>
+                                <include>acme-temp.wadl</include>
+                            </includes>
+                            <stylesheet>${project.build.directory}/generated-resources/cloud/normalizeWadl/normalizeWadl.xsl</stylesheet>
+                            <parameters>
+                                <parameter>
+                                    <name>flattenXsds</name>
+                                    <value>false</value>
+                                </parameter>
+                            </parameters>
+                        </transformationSet>
+                    </transformationSets>
+                </configuration>
+                <dependencies>
+                    <dependency>
+                        <groupId>net.sf.saxon</groupId>
+                        <artifactId>saxon</artifactId>
+                        <version>8.7</version>
+                    </dependency>
+                </dependencies>
+            </plugin>
             <plugin>
                 <groupId>com.rackspace.cloud.api</groupId>
                 <artifactId>clouddocs-maven-plugin</artifactId>
-                <version>1.0.8</version>
+                <version>${doctools.version}</version>
                 <executions>
                     <execution>
                         <goals>
