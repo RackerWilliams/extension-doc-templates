@@ -1,3 +1,19 @@
+<!DOCTYPE application [
+
+<!-- Bring in common entities from the openstack compute API -->
+<!ENTITY % common  SYSTEM "https://raw.github.com/openstack/compute-api/master/openstack-compute-api-1.1/src/common.ent">
+%common;
+
+<!-- Extended faults -->
+<!ENTITY extendedFaults '
+        <response status="403" xmlns="http://wadl.dev.java.net/2009/02">
+            <representation mediaType="application/xml" element="acme:notAllowed"/>
+            <representation mediaType="applicaiton/json"/>
+        </response>
+'>
+
+]>
+
 <application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
     xmlns:xsd="http://www.w3.org/2001/XMLSchema" 
     xmlns="http://wadl.dev.java.net/2009/02"
@@ -69,5 +85,7 @@
                 </doc>
             </representation>
         </response>
+        &commonFaults;
+        &extendedFaults;
     </method>
 </application>
