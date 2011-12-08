@@ -44,7 +44,11 @@ mvn clean assembly:assembly
 ----
 
 This will generate a zip file in +target+ which you can mail to
-extensions@openstack.org for publication. 
+extensions@openstack.org for publication.
+
+IMPORTANT: If you add additional WADLs or rename
++src/docbkx/acme-temp.xml+ you'll need to modify +pom.xml+ to make it
+aware of the changes.
 
 == Additional Resources
 
