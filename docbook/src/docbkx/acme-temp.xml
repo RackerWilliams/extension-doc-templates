@@ -267,7 +267,7 @@
       <section>
           <title>New Faults</title>
           <!--
-              Discribe any new faults, if any.  Make sure you specify
+              Describe any new faults, if any.  Make sure you specify
               if the fault can be expectid in all requests.
           -->
           <table rules="all">
@@ -470,6 +470,13 @@
           <title>New Actions</title>
           <!--
               Describe any new actions if any.
+          -->
+          <para>None.</para>
+      </section>
+      <section>
+          <title>New States</title>
+          <!--
+              Describe any new states.
           -->
           <para>None.</para>
       </section>
