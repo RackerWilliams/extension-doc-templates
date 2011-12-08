@@ -1,0 +1,32 @@
+Extension Documentation Template
+================================
+
+== Building docs from the template
+
+You will need the latest version of
+http://maven.apache.org/ref/3.0/[Maven 3] to build the
+documentation.
+
+Simply type:
+
+[source,shell]
+----
+mvn clean install
+----
+
+After the build you should find a PDF in +target/docbkx/pdf/+ and a
+web version in +target/docbkx/webhelp+.
+
+== Template files
+
+The template source is contained in +src/docbkx/+.  You will find the
+following files in the directory.
+
+|===========================================================
+|+src/docbkx/acme-temp.xml+  | The docbook template.  This contains a narrative description of the extension.
+|+src/docbkx/acme-temp.wadl+ | A WADL describing new REST resources.  This WADL can be directly referenced by the docbook text.
+|+src/docbkx/figures+        | Example figures used by the template. You can put you custom figures and images here.  Note that figures need to come in twe flavors SVG and PNG.
+|+src/docbkx/samples+        | Sample XML and JSON payloads referenced in the docbook or WADL.
+|===========================================================
+
+
