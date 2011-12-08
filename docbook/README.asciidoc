@@ -45,3 +45,8 @@ mvn clean assembly:assembly
 
 This will generate a zip file in +target+ which you can mail to
 extensions@openstack.org for publication. 
+
+== Additional Resources
+
+For more information on working with OpenStack documentation see
+http://wiki.openstack.org/Documentation/HowTo.
