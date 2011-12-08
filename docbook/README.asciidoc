@@ -4,12 +4,11 @@ Extension Documentation Template
 == Building docs from the template
 
 You will need the latest version of
-http://maven.apache.org/ref/3.0/[Maven 3] to build the
+http://maven.apache.org/download.html[Maven 3] to build the
 documentation.
 
 Simply type:
 
-[source,shell]
 ----
 mvn clean install
 ----
