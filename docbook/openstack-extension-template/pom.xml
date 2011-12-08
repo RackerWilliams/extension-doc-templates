@@ -3,10 +3,10 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.rackspace.cloud.docs.example</groupId>
-    <artifactId>Extension-example-docs</artifactId>
+    <artifactId>example-ext-doc</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-    <name>Example Extension Docs</name>
+    <name>Example Extension Doc</name>
 
     <properties>
         <doctools.version>1.0.8</doctools.version>
