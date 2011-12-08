@@ -2,18 +2,17 @@
 
 <extensions xmlns="http://docs.openstack.org/common/api/v1.0"
             xmlns:atom="http://www.w3.org/2005/Atom">
-    <extension name="Block Storge Extension"
-               namespace="http://docs.openstack.org/servers/api/ext/volumes/v1.0"
-               alias="OS-BS" updated="2011-11-06T00:00:00Z">
+    <extension name="ACME Template Extension"
+               namespace="http://docs.acme.org/servers/api/ext/template/v1.0"
+               alias="ACME-TEMP" updated="2011-11-30T00:00:00Z">
         <description>
-            The extension adds block storage capabilites
-            to the compute API.
+            The extension illustrates how to document other extensions.
         </description>
         <atom:link rel="describedby" type="application/pdf"
-                   href="http://docs.rackspacecloud.com/servers/api/ext/os-bs.pdf"/>
+                   href="http://docs.acme.com/servers/api/ext/acme-temp.pdf"/>
         <atom:link rel="describedby" type="application/vnd.sun.wadl+xml"
-                   href="http://docs.rackspacecloud.com/servers/api/ext/os-bs/os-bs.wadl"/>
+                   href="http://docs.acme.com/servers/api/ext/acme-temp.wadl"/>
         <atom:link rel="describedby" type="application/xml"
-                   href="http://docs.rackspacecloud.com/servers/api/ext/os-bs/api.xsd"/>
+                   href="http://docs.acme.com/servers/api/ext/acme-temp.xsd"/>
     </extension>
 </extensions>

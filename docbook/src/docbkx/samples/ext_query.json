@@ -1,27 +1,28 @@
 {
     "extensions": [
         {
-            "name": "Block Storge Extension",
-            "namespace": "http://docs.openstack.org/servers/api/ext/volumes/v1.0",
-            "alias": "OS-BS",
-            "updated": "2011-11-06T00:00:00Z",
-            "description": "The extension adds block storage capabilites to the compute API.",
+            "name": "ACME Template Extension",
+            "namespace": "http://docs.acme.org/servers/api/ext/template/v1.0",
+            "alias": "ACME-TEMP",
+            "updated": "2011-11-30T00:00:00Z",
+            "description": "The extension illustrates how to document other extensions.",
             "links": [
                 {
                     "rel": "describedby",
                     "type": "application/pdf",
-                    "href": "http://docs.rackspacecloud.com/servers/api/ext/os-bs.pdf"
+                    "href": "http://docs.acme.com/servers/api/ext/acme-temp.pdf"
                 },
                 {
                     "rel": "describedby",
                     "type": "application/vnd.sun.wadl+xml",
-                    "href": "http://docs.rackspacecloud.com/servers/api/ext/os-bs/os-bs.wadl"
+                    "href": "http://docs.acme.com/servers/api/ext/acme-temp.wadl"
                 },
                 {
                     "rel": "describedby",
                     "type": "application/xml",
-                    "href": "http://docs.rackspacecloud.com/servers/api/ext/os-bs/api.xsd"
+                    "href": "http://docs.acme.com/servers/api/ext/acme-temp.xsd"
                 }
             ]
         }
-    ]}
+    ]
+}
