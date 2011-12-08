@@ -1,0 +1,4 @@
+Extension Doc Templates
+=======================
+
+This repository contains templates for writing OpenStack extension documentation.
