@@ -11,7 +11,7 @@ consistent conversion to other formats possible.  See
 +../docbook/src/docbkx/acme-temp.wadl+ for an example.
 
 When you're done editing the extension and want to publish your docs
-mail all of our artifacts to extensions@openstack.org for publication.
+mail everything to extensions@openstack.org for publication.
 
 == Additional Resources
 
