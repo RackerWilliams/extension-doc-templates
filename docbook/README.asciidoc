@@ -36,7 +36,7 @@ WADLs, figures, and samples and reference them as is illustrated in
 +src/docbkx/acme-temp.xml+.  You may also added related XML and JSON
 schema files in the docbkx directory.
 
-When you're done editing the extension and want to publish you docs
+When you're done editing the extension and want to publish your docs
 type:
 
 ----
