@@ -234,7 +234,7 @@
       <section>
           <title>Document Change History</title>
           <para>
-              The most recent changes to this document are desrcibed
+              The most recent changes to this document are described
               below.
           </para>
           <!--
@@ -320,6 +320,8 @@
                   an external WADL (see below). You should probably
                   take the inline WADL apporach only when you have a
                   small number of resources and methods to describe.
+                  A WADL normalizer tool is available at:
+                  https://github.com/rackspace/wadl-tools
               -->
               <wadl:resources base="https://api.openstack.com/v2/ACME-TEMP">
                   <wadl:resource path="/ACME-TEMP/templates">
