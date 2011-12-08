@@ -115,6 +115,7 @@
     </revhistory>
   </info>
   <chapter xml:id="AboutExtension">
+      <?dbhtml stop-chunking?>
       <title>About This Extension</title>
       <variablelist spacing="compact">
           <varlistentry>
@@ -245,6 +246,7 @@
       </section>
   </chapter>
   <chapter>
+      
       <title>Summary of Changes</title>
       <!--
           Provide an overall summary of the extension.  Give an
@@ -257,6 +259,7 @@
           laoreet nec, adipiscing vel eros.  Integer sit amet nibh
           iaculis sapien sagittis blandit.
       </para>
+      <?dbhtml stop-chunking?>
       <section>
           <title>New Headers</title>
           <!--
