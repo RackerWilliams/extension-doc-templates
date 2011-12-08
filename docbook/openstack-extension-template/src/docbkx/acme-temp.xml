@@ -460,7 +460,10 @@
                   can insert a normalization step in the build process
                   (see pom.xml).
               -->
-              <wadl:resources href="acme-temp.wadl"/>
+              <wadl:resources>
+                  <wadl:resource href="acme-temp.wadl#widgets"/>
+                  <wadl:resource href="acme-temp.wadl#widget"/>
+              </wadl:resources>
           </section>
       </section>
       <section>
