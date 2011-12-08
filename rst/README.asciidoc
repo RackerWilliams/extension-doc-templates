@@ -1,0 +1,15 @@
+= Extension Documentation Template
+
+== How to use the template
+
+Simply fill in the blanks.  There are comments in the RST which give
+further guidance.  If possible supply JSON and XML payload examples in
+seperate files. Also, consider suppling a WADL if you're defining many
+resources, it may actually save you some typing and it makes
+consistent conversion to other formats possible.  See
++../docbook/src/docbkx/acme-temp.wadl+ for an example.
+
+== Additional Resources
+
+For more information on working with OpenStack documentation see
+http://wiki.openstack.org/Documentation/HowTo.
